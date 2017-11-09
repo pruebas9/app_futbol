@@ -1,0 +1,38 @@
+AppBundle\Entity\Pabellon:
+    type: entity
+    table: pabellones
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombre:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        address:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+        web:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        email:
+            type: string
+            nullable: true
+            length: 35
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

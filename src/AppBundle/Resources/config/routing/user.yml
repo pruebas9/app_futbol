@@ -1,0 +1,30 @@
+login: 
+    path: /login
+    defaults: { _controller: AppBundle:User:login } 
+
+login_check:
+    path: /login_check
+
+logout:
+    path: /logout
+    
+user_home:
+    path: /home
+    defaults: { _controller: AppBundle:User:index }
+       
+register:
+    path: /register
+    defaults: { _controller: AppBundle:User:register }
+    
+user_email_check:
+    path: /email_check
+    defaults: { _controller: AppBundle:User:emailExist }
+    methods: [POST]
+    
+jugadores:
+    path: /jugadores
+    defaults: { _controller: AppBundle:User:jugadores }
+    
+
+    
+

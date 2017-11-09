@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('js/custom/email_check.js') }}"></script>
+{% endblock %}
+{% block content %}
+    <div class="col-lg-4 box-form">
+        <div class="middle-box text-center loginscreen animated fadeInDown">
+        <div>
+            <div>
+
+                <h1 class="logo-name">PZ</h1>
+
+            </div>
+            <h3>Bienvenido a Pintxos y Zuritos</h3>
+            
+            <p>Regístrate como usuario</p>
+            
+            {{ form_start(form, {'action':'', 'method':'POST'}) }}
+            {{ form_errors(form) }}
+            {{ form_end(form) }}
+        </div>
+    </div>
+        
+
+{% endblock%}

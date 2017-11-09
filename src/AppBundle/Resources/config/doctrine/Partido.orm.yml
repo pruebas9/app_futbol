@@ -1,0 +1,32 @@
+AppBundle\Entity\Partido:
+    type: entity
+    table: partidos
+    indexes:
+        fk_partido_pabellon:
+            columns:
+                - id_pabellon
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        date:
+            type: datetime
+            nullable: true
+    manyToOne:
+        idPabellon:
+            targetEntity: Pabellon
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_pabellon:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

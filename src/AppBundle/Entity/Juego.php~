@@ -1,0 +1,98 @@
+<?php
+
+namespace AppBundle\Entity;
+
+/**
+ * Juego
+ */
+class Juego
+{
+    /**
+     * @var \AppBundle\Entity\Equipos
+     */
+    private $idEquipo;
+
+    /**
+     * @var \AppBundle\Entity\Partidos
+     */
+    private $idPartido;
+
+    /**
+     * @var \AppBundle\Entity\Users
+     */
+    private $idUsuario;
+
+
+    /**
+     * Set idEquipo
+     *
+     * @param \AppBundle\Entity\Equipos $idEquipo
+     *
+     * @return Juego
+     */
+    public function setIdEquipo(\AppBundle\Entity\Equipos $idEquipo = null)
+    {
+        $this->idEquipo = $idEquipo;
+
+        return $this;
+    }
+
+    /**
+     * Get idEquipo
+     *
+     * @return \AppBundle\Entity\Equipos
+     */
+    public function getIdEquipo()
+    {
+        return $this->idEquipo;
+    }
+
+    /**
+     * Set idPartido
+     *
+     * @param \AppBundle\Entity\Partidos $idPartido
+     *
+     * @return Juego
+     */
+    public function setIdPartido(\AppBundle\Entity\Partidos $idPartido = null)
+    {
+        $this->idPartido = $idPartido;
+
+        return $this;
+    }
+
+    /**
+     * Get idPartido
+     *
+     * @return \AppBundle\Entity\Partidos
+     */
+    public function getIdPartido()
+    {
+        return $this->idPartido;
+    }
+
+    /**
+     * Set idUsuario
+     *
+     * @param \AppBundle\Entity\Users $idUsuario
+     *
+     * @return Juego
+     */
+    public function setIdUsuario(\AppBundle\Entity\Users $idUsuario = null)
+    {
+        $this->idUsuario = $idUsuario;
+
+        return $this;
+    }
+
+    /**
+     * Get idUsuario
+     *
+     * @return \AppBundle\Entity\Users
+     */
+    public function getIdUsuario()
+    {
+        return $this->idUsuario;
+    }
+}
+

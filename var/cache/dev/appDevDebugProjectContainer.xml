@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
   <parameters>
-    <parameter key="kernel.root_dir">/home/hugo/proyectos/app_futbol/app_futbol/app</parameter>
-    <parameter key="kernel.project_dir">/home/hugo/proyectos/app_futbol/app_futbol</parameter>
+    <parameter key="kernel.root_dir">/home/hugo/proyectos/app_futbol/app</parameter>
+    <parameter key="kernel.project_dir">/home/hugo/proyectos/app_futbol</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.debug">true</parameter>
     <parameter key="kernel.name">app</parameter>
-    <parameter key="kernel.cache_dir">/home/hugo/proyectos/app_futbol/app_futbol/var/cache/dev</parameter>
-    <parameter key="kernel.logs_dir">/home/hugo/proyectos/app_futbol/app_futbol/var/logs</parameter>
+    <parameter key="kernel.cache_dir">/home/hugo/proyectos/app_futbol/var/cache/dev</parameter>
+    <parameter key="kernel.logs_dir">/home/hugo/proyectos/app_futbol/var/logs</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="SecurityBundle">Symfony\Bundle\SecurityBundle\SecurityBundle</parameter>
@@ -26,67 +26,67 @@
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/home/hugo/proyectos/app_futbol/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle</parameter>
+        <parameter key="path">/home/hugo/proyectos/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle</parameter>
         <parameter key="namespace">Symfony\Bundle\FrameworkBundle</parameter>
       </parameter>
       <parameter key="SecurityBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/home/hugo/proyectos/app_futbol/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle</parameter>
+        <parameter key="path">/home/hugo/proyectos/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle</parameter>
         <parameter key="namespace">Symfony\Bundle\SecurityBundle</parameter>
       </parameter>
       <parameter key="TwigBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/home/hugo/proyectos/app_futbol/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle</parameter>
+        <parameter key="path">/home/hugo/proyectos/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle</parameter>
         <parameter key="namespace">Symfony\Bundle\TwigBundle</parameter>
       </parameter>
       <parameter key="MonologBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/home/hugo/proyectos/app_futbol/app_futbol/vendor/symfony/monolog-bundle</parameter>
+        <parameter key="path">/home/hugo/proyectos/app_futbol/vendor/symfony/monolog-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\MonologBundle</parameter>
       </parameter>
       <parameter key="SwiftmailerBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/home/hugo/proyectos/app_futbol/app_futbol/vendor/symfony/swiftmailer-bundle</parameter>
+        <parameter key="path">/home/hugo/proyectos/app_futbol/vendor/symfony/swiftmailer-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\SwiftmailerBundle</parameter>
       </parameter>
       <parameter key="DoctrineBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/home/hugo/proyectos/app_futbol/app_futbol/vendor/doctrine/doctrine-bundle</parameter>
+        <parameter key="path">/home/hugo/proyectos/app_futbol/vendor/doctrine/doctrine-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\DoctrineBundle</parameter>
       </parameter>
       <parameter key="SensioFrameworkExtraBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/home/hugo/proyectos/app_futbol/app_futbol/vendor/sensio/framework-extra-bundle</parameter>
+        <parameter key="path">/home/hugo/proyectos/app_futbol/vendor/sensio/framework-extra-bundle</parameter>
         <parameter key="namespace">Sensio\Bundle\FrameworkExtraBundle</parameter>
       </parameter>
       <parameter key="AppBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/home/hugo/proyectos/app_futbol/app_futbol/src/AppBundle</parameter>
+        <parameter key="path">/home/hugo/proyectos/app_futbol/src/AppBundle</parameter>
         <parameter key="namespace">AppBundle</parameter>
       </parameter>
       <parameter key="DebugBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/home/hugo/proyectos/app_futbol/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle</parameter>
+        <parameter key="path">/home/hugo/proyectos/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle</parameter>
         <parameter key="namespace">Symfony\Bundle\DebugBundle</parameter>
       </parameter>
       <parameter key="WebProfilerBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/home/hugo/proyectos/app_futbol/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle</parameter>
+        <parameter key="path">/home/hugo/proyectos/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle</parameter>
         <parameter key="namespace">Symfony\Bundle\WebProfilerBundle</parameter>
       </parameter>
       <parameter key="SensioDistributionBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/home/hugo/proyectos/app_futbol/app_futbol/vendor/sensio/distribution-bundle</parameter>
+        <parameter key="path">/home/hugo/proyectos/app_futbol/vendor/sensio/distribution-bundle</parameter>
         <parameter key="namespace">Sensio\Bundle\DistributionBundle</parameter>
       </parameter>
       <parameter key="SensioGeneratorBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/home/hugo/proyectos/app_futbol/app_futbol/vendor/sensio/generator-bundle</parameter>
+        <parameter key="path">/home/hugo/proyectos/app_futbol/vendor/sensio/generator-bundle</parameter>
         <parameter key="namespace">Sensio\Bundle\GeneratorBundle</parameter>
       </parameter>
       <parameter key="WebServerBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/home/hugo/proyectos/app_futbol/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/WebServerBundle</parameter>
+        <parameter key="path">/home/hugo/proyectos/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/WebServerBundle</parameter>
         <parameter key="namespace">Symfony\Bundle\WebServerBundle</parameter>
       </parameter>
     </parameter>
@@ -94,7 +94,7 @@
     <parameter key="kernel.container_class">appDevDebugProjectContainer</parameter>
     <parameter key="database_host">127.0.0.1</parameter>
     <parameter key="database_port">null</parameter>
-    <parameter key="database_name">futbol</parameter>
+    <parameter key="database_name">app_f</parameter>
     <parameter key="database_user">root</parameter>
     <parameter key="database_password">null</parameter>
     <parameter key="mailer_transport">smtp</parameter>
@@ -116,7 +116,7 @@
       <parameter key="cookie_httponly">true</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
-    <parameter key="session.save_path">/home/hugo/proyectos/app_futbol/app_futbol/var/sessions/dev</parameter>
+    <parameter key="session.save_path">/home/hugo/proyectos/app_futbol/var/sessions/dev</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="form.type_extension.csrf.enabled">true</parameter>
     <parameter key="form.type_extension.csrf.field_name">_token</parameter>
@@ -125,13 +125,13 @@
       <parameter>twig</parameter>
     </parameter>
     <parameter key="validator.mapping.cache.prefix"></parameter>
-    <parameter key="validator.mapping.cache.file">/home/hugo/proyectos/app_futbol/app_futbol/var/cache/dev/validation.php</parameter>
+    <parameter key="validator.mapping.cache.file">/home/hugo/proyectos/app_futbol/var/cache/dev/validation.php</parameter>
     <parameter key="validator.translation_domain">validators</parameter>
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_master_requests">false</parameter>
-    <parameter key="profiler.storage.dsn">file:/home/hugo/proyectos/app_futbol/app_futbol/var/cache/dev/profiler</parameter>
+    <parameter key="profiler.storage.dsn">file:/home/hugo/proyectos/app_futbol/var/cache/dev/profiler</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
-    <parameter key="debug.container.dump">/home/hugo/proyectos/app_futbol/app_futbol/var/cache/dev/appDevDebugProjectContainer.xml</parameter>
+    <parameter key="debug.container.dump">/home/hugo/proyectos/app_futbol/var/cache/dev/appDevDebugProjectContainer.xml</parameter>
     <parameter key="router.options.generator_class">Symfony\Component\Routing\Generator\UrlGenerator</parameter>
     <parameter key="router.options.generator_base_class">Symfony\Component\Routing\Generator\UrlGenerator</parameter>
     <parameter key="router.options.generator_dumper_class">Symfony\Component\Routing\Generator\Dumper\PhpGeneratorDumper</parameter>
@@ -143,7 +143,7 @@
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
-    <parameter key="router.resource">/home/hugo/proyectos/app_futbol/app_futbol/app/config/routing_dev.yml</parameter>
+    <parameter key="router.resource">/home/hugo/proyectos/app_futbol/app/config/routing_dev.yml</parameter>
     <parameter key="router.cache_class_prefix">appDevDebugProjectContainer</parameter>
     <parameter key="request_listener.http_port">80</parameter>
     <parameter key="request_listener.https_port">443</parameter>
@@ -202,7 +202,7 @@
     <parameter key="swiftmailer.mailer.default.transport.smtp.timeout">30</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.source_ip">null</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.local_domain">null</parameter>
-    <parameter key="swiftmailer.spool.default.memory.path">/home/hugo/proyectos/app_futbol/app_futbol/var/cache/dev/swiftmailer/spool/default</parameter>
+    <parameter key="swiftmailer.spool.default.memory.path">/home/hugo/proyectos/app_futbol/var/cache/dev/swiftmailer/spool/default</parameter>
     <parameter key="swiftmailer.mailer.default.spool.enabled">true</parameter>
     <parameter key="swiftmailer.mailer.default.plugin.impersonate">null</parameter>
     <parameter key="swiftmailer.mailer.default.single_address">null</parameter>
@@ -321,7 +321,7 @@
     <parameter key="doctrine.orm.second_level_cache.cache_configuration.class">Doctrine\ORM\Cache\CacheConfiguration</parameter>
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
-    <parameter key="doctrine.orm.proxy_dir">/home/hugo/proyectos/app_futbol/app_futbol/var/cache/dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">/home/hugo/proyectos/app_futbol/var/cache/dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
     <parameter key="sensio_framework_extra.view.guesser.class">Sensio\Bundle\FrameworkExtraBundle\Templating\TemplateGuesser</parameter>
     <parameter key="sensio_framework_extra.controller.listener.class">Sensio\Bundle\FrameworkExtraBundle\EventListener\ControllerListener</parameter>
@@ -414,8 +414,11 @@
   <services>
     <service id="service_container" class="Symfony\Component\DependencyInjection\ContainerInterface" synthetic="true"/>
     <service id="AppBundle\AppBundle" class="AppBundle\AppBundle" public="false" autowire="true" autoconfigure="true"/>
-    <service id="AppBundle\Controller\DefaultController" class="AppBundle\Controller\DefaultController" autowire="true" autoconfigure="true">
+    <service id="AppBundle\Controller\UserController" class="AppBundle\Controller\UserController" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
+    </service>
+    <service id="AppBundle\Form\RegisterType" class="AppBundle\Form\RegisterType" public="false" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
     </service>
     <service id="controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
@@ -433,7 +436,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-50"/>
-      <argument type="service" id="service_locator.ebdaf59977bc26dc6a191d4f5f8254cb"/>
+      <argument type="service" id="service_locator.b8bfd291cdcc7c2aa1150160993f981f"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-100"/>
@@ -461,10 +464,10 @@
       <tag name="kernel.event_subscriber"/>
       <argument type="service" id="controller_name_converter"/>
     </service>
-    <service id="2_a4e0bb6947ecad7b96dfde5890405cbd520f36833ee1f0900c97f5d8c5883b12" class="Symfony\Component\Config\Resource\SelfCheckingResourceChecker" public="false">
+    <service id="2_19cb91aae7c07f4a003f16a4bfccceb0a5a6cbce4155c0756ea3f4637665cd35" class="Symfony\Component\Config\Resource\SelfCheckingResourceChecker" public="false">
       <tag name="config_cache.resource_checker" priority="-990"/>
     </service>
-    <service id="1_a4e0bb6947ecad7b96dfde5890405cbd520f36833ee1f0900c97f5d8c5883b12" class="Symfony\Component\DependencyInjection\Config\ContainerParametersResourceChecker" public="false">
+    <service id="1_19cb91aae7c07f4a003f16a4bfccceb0a5a6cbce4155c0756ea3f4637665cd35" class="Symfony\Component\DependencyInjection\Config\ContainerParametersResourceChecker" public="false">
       <tag name="config_cache.resource_checker" priority="-980"/>
       <argument type="service" id="service_container"/>
     </service>
@@ -506,9 +509,9 @@
     <service id="filesystem" class="Symfony\Component\Filesystem\Filesystem"/>
     <service id="file_locator" class="Symfony\Component\HttpKernel\Config\FileLocator">
       <argument type="service" id="kernel"/>
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol/app/Resources</argument>
+      <argument>/home/hugo/proyectos/app_futbol/app/Resources</argument>
       <argument type="collection">
-        <argument>/home/hugo/proyectos/app_futbol/app_futbol/app</argument>
+        <argument>/home/hugo/proyectos/app_futbol/app</argument>
       </argument>
     </service>
     <service id="uri_signer" class="Symfony\Component\HttpKernel\UriSigner">
@@ -516,8 +519,8 @@
     </service>
     <service id="config_cache_factory" class="Symfony\Component\Config\ResourceCheckerConfigCacheFactory">
       <argument type="iterator">
-        <argument type="service" id="1_a4e0bb6947ecad7b96dfde5890405cbd520f36833ee1f0900c97f5d8c5883b12"/>
-        <argument type="service" id="2_a4e0bb6947ecad7b96dfde5890405cbd520f36833ee1f0900c97f5d8c5883b12"/>
+        <argument type="service" id="1_19cb91aae7c07f4a003f16a4bfccceb0a5a6cbce4155c0756ea3f4637665cd35"/>
+        <argument type="service" id="2_19cb91aae7c07f4a003f16a4bfccceb0a5a6cbce4155c0756ea3f4637665cd35"/>
       </argument>
     </service>
     <service id="fragment.handler" class="Symfony\Component\HttpKernel\DependencyInjection\LazyLoadingFragmentHandler">
@@ -601,8 +604,8 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>24v+noEsDpk5hnD8xvRlHt</argument>
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol/var/cache/dev/pools</argument>
+      <argument>D9Ozb6U-CRnQ808PPY70CH</argument>
+      <argument>/home/hugo/proyectos/app_futbol/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -611,7 +614,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>24v+noEsDpk5hnD8xvRlHt</argument>
+      <argument>D9Ozb6U-CRnQ808PPY70CH</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -631,7 +634,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol/var/cache/dev/pools</argument>
+      <argument>/home/hugo/proyectos/app_futbol/var/cache/dev/pools</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -670,7 +673,7 @@
       <argument type="service" id="translator.selector"/>
     </service>
     <service id="translator.selector" class="Symfony\Component\Translation\MessageSelector" public="false"/>
-    <service id="1_dabf72ae32bf532b78bf8690f490ea33e851e61dff1ce6d105f608e9880110bb" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="1_b37803b1afe72cc8043c4a28d3b683d34c9c6733980307e6b8d71033740dd93b" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="session" type="service" id="session" on-invalid="ignore"/>
@@ -700,23 +703,23 @@
     <service id="session.flash_bag" class="Symfony\Component\HttpFoundation\Session\Flash\FlashBag" public="false"/>
     <service id="session.attribute_bag" class="Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag" public="false"/>
     <service id="session.storage.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage" public="false">
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol/var/cache/dev/sessions</argument>
+      <argument>/home/hugo/proyectos/app_futbol/var/cache/dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service" id="session.storage.metadata_bag"/>
     </service>
     <service id="session.handler.native_file" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol/var/sessions/dev</argument>
+      <argument>/home/hugo/proyectos/app_futbol/var/sessions/dev</argument>
     </service>
     <service id="session.handler.write_check" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\WriteCheckSessionHandler" public="false"/>
     <service id="session_listener" class="Symfony\Component\HttpKernel\EventListener\SessionListener">
       <tag name="kernel.event_subscriber"/>
-      <argument type="service" id="1_dabf72ae32bf532b78bf8690f490ea33e851e61dff1ce6d105f608e9880110bb"/>
+      <argument type="service" id="1_b37803b1afe72cc8043c4a28d3b683d34c9c6733980307e6b8d71033740dd93b"/>
     </service>
     <service id="session.save_listener" class="Symfony\Component\HttpKernel\EventListener\SaveSessionListener">
       <tag name="kernel.event_subscriber"/>
     </service>
     <service id="form.resolved_type_factory" class="Symfony\Component\Form\Extension\DataCollector\Proxy\ResolvedTypeFactoryDataCollectorProxy">
-      <argument type="service" id="1_dfec6b1212648ea65a35be03848fda917283fca7ab3c737bcb9b95fc92806384"/>
+      <argument type="service" id="1_45b2294b7021c15655b8c7f530dbceb21c970e800ae5098ca7d55d3cf5b458a6"/>
       <argument type="service" id="data_collector.form"/>
     </service>
     <service id="form.registry" class="Symfony\Component\Form\FormRegistry">
@@ -730,7 +733,7 @@
       <argument type="service" id="form.resolved_type_factory"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id="service_locator.ceb8bbb9f48e8bfd1c8ec2d209eabdca"/>
+      <argument type="service" id="service_locator.ef358fc66c81cca76aadbff23e5dcdee"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.http_foundation"/>
@@ -963,12 +966,12 @@
     <service id="templating.filename_parser" class="Symfony\Bundle\FrameworkBundle\Templating\TemplateFilenameParser"/>
     <service id="templating.locator" class="Symfony\Bundle\FrameworkBundle\Templating\Loader\TemplateLocator" public="false">
       <argument type="service" id="file_locator"/>
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol/var/cache/dev</argument>
+      <argument>/home/hugo/proyectos/app_futbol/var/cache/dev</argument>
     </service>
     <service id="templating.finder" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplateFinder" public="false">
       <argument type="service" id="kernel"/>
       <argument type="service" id="templating.filename_parser"/>
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol/app/Resources</argument>
+      <argument>/home/hugo/proyectos/app_futbol/app/Resources</argument>
     </service>
     <service id="templating.cache_warmer.template_paths" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplatePathsCacheWarmer" public="false">
       <tag name="kernel.cache_warmer" priority="20"/>
@@ -992,13 +995,13 @@
         <argument type="service" id="monolog.logger.templating" on-invalid="ignore"/>
       </call>
     </service>
-    <service id="2_a1c141666f7bf635506a2a12288e54cb1508f856346c8d2d0dc607f00a06aa58" class="Doctrine\Common\Cache\ApcCache" public="false">
+    <service id="2_0acc7117c8bb28b89c993acfda49c05800b069e6442166b503b49c649cdd3a3f" class="Doctrine\Common\Cache\ApcCache" public="false">
       <call method="setNamespace">
         <argument></argument>
       </call>
     </service>
-    <service id="1_a1c141666f7bf635506a2a12288e54cb1508f856346c8d2d0dc607f00a06aa58" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol/var/cache/dev/validation.php</argument>
+    <service id="1_0acc7117c8bb28b89c993acfda49c05800b069e6442166b503b49c649cdd3a3f" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
+      <argument>/home/hugo/proyectos/app_futbol/var/cache/dev/validation.php</argument>
       <argument type="service" id="cache.validator"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -1017,7 +1020,7 @@
       </call>
       <call method="addXmlMappings">
         <argument type="collection">
-          <argument>/home/hugo/proyectos/app_futbol/app_futbol/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/config/validation.xml</argument>
+          <argument>/home/hugo/proyectos/app_futbol/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/config/validation.xml</argument>
         </argument>
       </call>
       <call method="enableAnnotationMapping">
@@ -1036,14 +1039,14 @@
     <service id="validator.mapping.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\ValidatorCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="validator.builder"/>
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol/var/cache/dev/validation.php</argument>
+      <argument>/home/hugo/proyectos/app_futbol/var/cache/dev/validation.php</argument>
       <argument type="service" id="cache.validator"/>
     </service>
     <service id="validator.mapping.cache.symfony" class="Symfony\Component\Validator\Mapping\Cache\Psr6Cache" public="false">
-      <argument type="service" id="1_a1c141666f7bf635506a2a12288e54cb1508f856346c8d2d0dc607f00a06aa58"/>
+      <argument type="service" id="1_0acc7117c8bb28b89c993acfda49c05800b069e6442166b503b49c649cdd3a3f"/>
     </service>
     <service id="validator.mapping.cache.doctrine.apc" class="Symfony\Component\Validator\Mapping\Cache\DoctrineCache" public="false">
-      <argument type="service" id="2_a1c141666f7bf635506a2a12288e54cb1508f856346c8d2d0dc607f00a06aa58"/>
+      <argument type="service" id="2_0acc7117c8bb28b89c993acfda49c05800b069e6442166b503b49c649cdd3a3f"/>
     </service>
     <service id="validator.validator_factory" class="Symfony\Component\Validator\ContainerConstraintValidatorFactory" public="false">
       <argument type="service" id="service_locator.39e66930232432ca5ba91e98fdd8a17b"/>
@@ -1114,7 +1117,7 @@
       </call>
     </service>
     <service id="profiler.storage" class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage" public="false">
-      <argument>file:/home/hugo/proyectos/app_futbol/app_futbol/var/cache/dev/profiler</argument>
+      <argument>file:/home/hugo/proyectos/app_futbol/var/cache/dev/profiler</argument>
     </service>
     <service id="profiler_listener" class="Symfony\Component\HttpKernel\EventListener\ProfilerListener">
       <tag name="kernel.event_subscriber"/>
@@ -1148,7 +1151,7 @@
       <tag name="data_collector" template="@WebProfiler/Collector/logger.html.twig" id="logger" priority="300"/>
       <tag name="monolog.logger" channel="profiler"/>
       <argument type="service" id="monolog.logger.profiler" on-invalid="ignore"/>
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol/var/cache/dev/appDevDebugProjectContainer</argument>
+      <argument>/home/hugo/proyectos/app_futbol/var/cache/dev/appDevDebugProjectContainer</argument>
     </service>
     <service id="data_collector.time" class="Symfony\Component\HttpKernel\DataCollector\TimeDataCollector" public="false">
       <tag name="data_collector" template="@WebProfiler/Collector/time.html.twig" id="time" priority="330"/>
@@ -1185,7 +1188,7 @@
         <argument type="service" id="cache.annotations"/>
       </call>
     </service>
-    <service id="1_dfec6b1212648ea65a35be03848fda917283fca7ab3c737bcb9b95fc92806384" class="Symfony\Component\Form\ResolvedFormTypeFactory" public="false"/>
+    <service id="1_45b2294b7021c15655b8c7f530dbceb21c970e800ae5098ca7d55d3cf5b458a6" class="Symfony\Component\Form\ResolvedFormTypeFactory" public="false"/>
     <service id="form.type_extension.form.data_collector" class="Symfony\Component\Form\Extension\DataCollector\Type\DataCollectorTypeExtension" public="false">
       <tag name="form.type_extension" extended_type="Symfony\Component\Form\Extension\Core\Type\FormType" extended-type="Symfony\Component\Form\Extension\Core\Type\FormType"/>
       <argument type="service" id="data_collector.form"/>
@@ -1222,7 +1225,7 @@
     <service id="debug.file_link_formatter" class="Symfony\Component\HttpKernel\Debug\FileLinkFormatter" public="false">
       <argument>null</argument>
       <argument type="service" id="request_stack" on-invalid="ignore"/>
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol</argument>
+      <argument>/home/hugo/proyectos/app_futbol</argument>
       <argument>/_profiler/open?file=%%f&amp;line=%%l#line%%l</argument>
     </service>
     <service id="debug.event_dispatcher" class="Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher">
@@ -1622,9 +1625,9 @@
     <service id="router.default" class="Symfony\Bundle\FrameworkBundle\Routing\Router" public="false">
       <tag name="monolog.logger" channel="router"/>
       <argument type="service" id="service_container"/>
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol/app/config/routing_dev.yml</argument>
+      <argument>/home/hugo/proyectos/app_futbol/app/config/routing_dev.yml</argument>
       <argument type="collection">
-        <argument key="cache_dir">/home/hugo/proyectos/app_futbol/app_futbol/var/cache/dev</argument>
+        <argument key="cache_dir">/home/hugo/proyectos/app_futbol/var/cache/dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
         <argument key="generator_base_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
@@ -1662,13 +1665,13 @@
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
       <argument type="service" id="monolog.logger.request" on-invalid="ignore"/>
     </service>
-    <service id="3_8f00aaea91549ebe56d4994d726b7f0c8efc4e0ce172fa635c0618798209e00b" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol/var/cache/dev/annotations.php</argument>
+    <service id="3_c26090367f9fd2b8ecfe79f7309922850da01d4222649c34e74a13bdbc483f24" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
+      <argument>/home/hugo/proyectos/app_futbol/var/cache/dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
-    <service id="2_8f00aaea91549ebe56d4994d726b7f0c8efc4e0ce172fa635c0618798209e00b" class="Doctrine\Common\Cache\ArrayCache" public="false"/>
-    <service id="1_8f00aaea91549ebe56d4994d726b7f0c8efc4e0ce172fa635c0618798209e00b" class="Doctrine\Common\Annotations\AnnotationRegistry" public="false">
+    <service id="2_c26090367f9fd2b8ecfe79f7309922850da01d4222649c34e74a13bdbc483f24" class="Doctrine\Common\Cache\ArrayCache" public="false"/>
+    <service id="1_c26090367f9fd2b8ecfe79f7309922850da01d4222649c34e74a13bdbc483f24" class="Doctrine\Common\Annotations\AnnotationRegistry" public="false">
       <call method="registerLoader">
         <argument>class_exists</argument>
       </call>
@@ -1676,7 +1679,7 @@
     <service id="annotations.reader" class="Doctrine\Common\Annotations\AnnotationReader" public="false">
       <call method="addGlobalIgnoredName">
         <argument>required</argument>
-        <argument type="service" id="1_8f00aaea91549ebe56d4994d726b7f0c8efc4e0ce172fa635c0618798209e00b"/>
+        <argument type="service" id="1_c26090367f9fd2b8ecfe79f7309922850da01d4222649c34e74a13bdbc483f24"/>
       </call>
     </service>
     <service id="annotations.filesystem_cache" class="Doctrine\Common\Cache\FilesystemCache" public="false">
@@ -1685,11 +1688,11 @@
     <service id="annotations.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="annotations.reader"/>
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol/var/cache/dev/annotations.php</argument>
+      <argument>/home/hugo/proyectos/app_futbol/var/cache/dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
     </service>
     <service id="annotations.cache" class="Symfony\Component\Cache\DoctrineProvider" public="false">
-      <argument type="service" id="3_8f00aaea91549ebe56d4994d726b7f0c8efc4e0ce172fa635c0618798209e00b"/>
+      <argument type="service" id="3_c26090367f9fd2b8ecfe79f7309922850da01d4222649c34e74a13bdbc483f24"/>
     </service>
     <service id="security.authorization_checker" class="Symfony\Component\Security\Core\Authorization\AuthorizationChecker">
       <argument type="service" id="security.token_storage"/>
@@ -1704,6 +1707,7 @@
     </service>
     <service id="security.authentication.manager" class="Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager" public="false">
       <argument type="iterator">
+        <argument type="service" id="security.authentication.provider.dao.main"/>
         <argument type="service" id="security.authentication.provider.anonymous.main"/>
       </argument>
       <argument>true</argument>
@@ -1719,7 +1723,14 @@
       <argument>migrate</argument>
     </service>
     <service id="security.encoder_factory.generic" class="Symfony\Component\Security\Core\Encoder\EncoderFactory" public="false">
-      <argument type="collection"/>
+      <argument type="collection">
+        <argument key="AppBundle\Entity\User" type="collection">
+          <argument key="class">Symfony\Component\Security\Core\Encoder\BCryptPasswordEncoder</argument>
+          <argument key="arguments" type="collection">
+            <argument>4</argument>
+          </argument>
+        </argument>
+      </argument>
     </service>
     <service id="security.user_password_encoder.generic" class="Symfony\Component\Security\Core\Encoder\UserPasswordEncoder" public="false">
       <argument type="service" id="security.encoder_factory.generic"/>
@@ -1780,6 +1791,14 @@
       <argument type="service" id="request_stack" on-invalid="null"/>
       <argument type="service" id="router.default" on-invalid="null"/>
       <argument type="service" id="security.token_storage" on-invalid="null"/>
+      <call method="registerListener">
+        <argument>main</argument>
+        <argument>/logout</argument>
+        <argument>logout</argument>
+        <argument>_csrf_token</argument>
+        <argument>null</argument>
+        <argument>null</argument>
+      </call>
     </service>
     <service id="security.user.provider.in_memory" class="Symfony\Component\Security\Core\User\InMemoryUserProvider" public="false" abstract="true"/>
     <service id="security.user.provider.in_memory.user" class="Symfony\Component\Security\Core\User\User" public="false" abstract="true"/>
@@ -1830,7 +1849,7 @@
       <tag name="monolog.logger" channel="security"/>
       <argument type="service" id="security.token_storage"/>
       <argument type="collection">
-        <argument type="service" id="security.user.provider.concrete.in_memory"/>
+        <argument type="service" id="security.user.provider.concrete.user_provider"/>
       </argument>
       <argument></argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
@@ -2112,7 +2131,12 @@
     <service id="debug.security.access.decision_manager" class="Symfony\Component\Security\Core\Authorization\TraceableAccessDecisionManager" public="false">
       <argument type="service" id="debug.security.access.decision_manager.inner"/>
     </service>
-    <service id="security.user.provider.concrete.in_memory" class="Symfony\Component\Security\Core\User\InMemoryUserProvider" public="false"/>
+    <service id="security.user.provider.concrete.user_provider" class="Symfony\Bridge\Doctrine\Security\User\EntityUserProvider" public="false">
+      <argument type="service" id="doctrine"/>
+      <argument>AppBundle:User</argument>
+      <argument>email</argument>
+      <argument>null</argument>
+    </service>
     <service id="security.firewall.map.config.dev" class="Symfony\Bundle\SecurityBundle\Security\FirewallConfig" public="false">
       <argument>dev</argument>
       <argument>security.user_checker</argument>
@@ -2140,40 +2164,125 @@
       <argument>null</argument>
       <argument>true</argument>
       <argument>false</argument>
-      <argument>security.user.provider.concrete.in_memory</argument>
+      <argument>security.user.provider.concrete.user_provider</argument>
       <argument>main</argument>
-      <argument>null</argument>
+      <argument>security.authentication.form_entry_point.main</argument>
       <argument>null</argument>
       <argument>null</argument>
       <argument type="collection">
+        <argument>logout</argument>
+        <argument>form_login</argument>
         <argument>anonymous</argument>
       </argument>
     </service>
     <service id="security.context_listener.0" class="Symfony\Component\Security\Http\Firewall\ContextListener" public="false">
       <argument type="service" id="security.token_storage"/>
       <argument type="collection">
-        <argument type="service" id="security.user.provider.concrete.in_memory"/>
+        <argument type="service" id="security.user.provider.concrete.user_provider"/>
       </argument>
       <argument>main</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="debug.event_dispatcher" on-invalid="null"/>
       <argument type="service" id="security.authentication.trust_resolver"/>
     </service>
+    <service id="security.logout_listener.main" class="Symfony\Component\Security\Http\Firewall\LogoutListener" public="false">
+      <argument type="service" id="security.token_storage"/>
+      <argument type="service" id="security.http_utils"/>
+      <argument type="service" id="security.logout.success_handler.main"/>
+      <argument type="collection">
+        <argument key="csrf_parameter">_csrf_token</argument>
+        <argument key="csrf_token_id">logout</argument>
+        <argument key="logout_path">/logout</argument>
+      </argument>
+      <call method="addHandler">
+        <argument type="service" id="security.logout.handler.session"/>
+      </call>
+    </service>
+    <service id="security.logout.success_handler.main" class="Symfony\Component\Security\Http\Logout\DefaultLogoutSuccessHandler" public="false">
+      <argument type="service" id="security.http_utils"/>
+      <argument>/</argument>
+    </service>
+    <service id="security.authentication.provider.dao.main" class="Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider" public="false">
+      <argument type="service" id="security.user.provider.concrete.user_provider"/>
+      <argument type="service" id="security.user_checker"/>
+      <argument>main</argument>
+      <argument type="service" id="security.encoder_factory.generic"/>
+      <argument>true</argument>
+    </service>
+    <service id="security.authentication.success_handler.main.form_login" class="Symfony\Component\Security\Http\Authentication\DefaultAuthenticationSuccessHandler" public="false">
+      <argument type="service" id="security.http_utils"/>
+      <argument type="collection"/>
+      <call method="setOptions">
+        <argument type="collection">
+          <argument key="login_path">/login</argument>
+          <argument key="always_use_default_target_path">false</argument>
+          <argument key="default_target_path">/</argument>
+          <argument key="target_path_parameter">_target_path</argument>
+          <argument key="use_referer">false</argument>
+        </argument>
+      </call>
+      <call method="setProviderKey">
+        <argument>main</argument>
+      </call>
+    </service>
+    <service id="security.authentication.failure_handler.main.form_login" class="Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler" public="false">
+      <argument type="service" id="http_kernel"/>
+      <argument type="service" id="security.http_utils"/>
+      <argument type="collection"/>
+      <argument type="service" id="monolog.logger.security" on-invalid="null"/>
+      <call method="setOptions">
+        <argument type="collection">
+          <argument key="login_path">/login</argument>
+          <argument key="failure_path">null</argument>
+          <argument key="failure_forward">false</argument>
+          <argument key="failure_path_parameter">_failure_path</argument>
+        </argument>
+      </call>
+    </service>
+    <service id="security.authentication.listener.form.main" class="Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener" public="false">
+      <tag name="security.remember_me_aware" id="main" provider="security.user.provider.concrete.user_provider"/>
+      <argument type="service" id="security.token_storage"/>
+      <argument type="service" id="security.authentication.manager"/>
+      <argument type="service" id="security.authentication.session_strategy"/>
+      <argument type="service" id="security.http_utils"/>
+      <argument>main</argument>
+      <argument type="service" id="security.authentication.success_handler.main.form_login"/>
+      <argument type="service" id="security.authentication.failure_handler.main.form_login"/>
+      <argument type="collection">
+        <argument key="check_path">/login_check</argument>
+        <argument key="use_forward">false</argument>
+        <argument key="require_previous_session">true</argument>
+        <argument key="username_parameter">_username</argument>
+        <argument key="password_parameter">_password</argument>
+        <argument key="csrf_parameter">_csrf_token</argument>
+        <argument key="csrf_token_id">authenticate</argument>
+        <argument key="post_only">true</argument>
+      </argument>
+      <argument type="service" id="monolog.logger.security" on-invalid="null"/>
+      <argument type="service" id="debug.event_dispatcher" on-invalid="null"/>
+      <argument>null</argument>
+    </service>
+    <service id="security.authentication.form_entry_point.main" class="Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint" public="false">
+      <argument type="service" id="http_kernel"/>
+      <argument type="service" id="security.http_utils"/>
+      <argument>/login</argument>
+      <argument>false</argument>
+    </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>59f628622f9568.26995686</argument>
+      <argument>5a049bb8ec5923.35921721</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>59f628622f9568.26995686</argument>
+      <argument>5a049bb8ec5923.35921721</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
       <argument type="service" id="security.authentication.trust_resolver"/>
       <argument type="service" id="security.http_utils"/>
       <argument>main</argument>
-      <argument>null</argument>
+      <argument type="service" id="security.authentication.form_entry_point.main"/>
       <argument>null</argument>
       <argument>null</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
@@ -2183,6 +2292,8 @@
       <argument type="collection">
         <argument type="service" id="security.channel_listener"/>
         <argument type="service" id="security.context_listener.0"/>
+        <argument type="service" id="security.logout_listener.main"/>
+        <argument type="service" id="security.authentication.listener.form.main"/>
         <argument type="service" id="security.authentication.listener.anonymous.main"/>
         <argument type="service" id="security.access_listener"/>
       </argument>
@@ -2199,7 +2310,9 @@
     <service id="security.console.user_password_encoder_command" class="Symfony\Bundle\SecurityBundle\Command\UserPasswordEncoderCommand" public="false">
       <tag name="console.command"/>
       <argument type="service" id="security.encoder_factory.generic"/>
-      <argument type="collection"/>
+      <argument type="collection">
+        <argument>AppBundle\Entity\User</argument>
+      </argument>
     </service>
     <service id="twig" class="Twig\Environment">
       <argument type="service" id="twig.loader.filesystem"/>
@@ -2211,7 +2324,7 @@
           <argument>form_div_layout.html.twig</argument>
         </argument>
         <argument key="autoescape">name</argument>
-        <argument key="cache">/home/hugo/proyectos/app_futbol/app_futbol/var/cache/dev/twig</argument>
+        <argument key="cache">/home/hugo/proyectos/app_futbol/var/cache/dev/twig</argument>
         <argument key="charset">UTF-8</argument>
         <argument key="paths" type="collection"/>
         <argument key="date" type="collection">
@@ -2312,7 +2425,7 @@
     </service>
     <service id="twig.template_iterator" class="Symfony\Bundle\TwigBundle\TemplateIterator" public="false">
       <argument type="service" id="kernel"/>
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol/app</argument>
+      <argument>/home/hugo/proyectos/app_futbol/app</argument>
       <argument type="collection"/>
     </service>
     <service id="twig.template_cache_warmer" class="Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheWarmer" public="false">
@@ -2322,40 +2435,40 @@
     </service>
     <service id="twig.loader.native_filesystem" class="Twig\Loader\FilesystemLoader" public="false">
       <argument type="collection"/>
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol</argument>
+      <argument>/home/hugo/proyectos/app_futbol</argument>
       <call method="addPath">
-        <argument>/home/hugo/proyectos/app_futbol/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views</argument>
+        <argument>/home/hugo/proyectos/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views</argument>
         <argument>Framework</argument>
       </call>
       <call method="addPath">
-        <argument>/home/hugo/proyectos/app_futbol/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views</argument>
+        <argument>/home/hugo/proyectos/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views</argument>
         <argument>Security</argument>
       </call>
       <call method="addPath">
-        <argument>/home/hugo/proyectos/app_futbol/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views</argument>
+        <argument>/home/hugo/proyectos/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views</argument>
         <argument>Twig</argument>
       </call>
       <call method="addPath">
-        <argument>/home/hugo/proyectos/app_futbol/app_futbol/vendor/symfony/swiftmailer-bundle/Resources/views</argument>
+        <argument>/home/hugo/proyectos/app_futbol/vendor/symfony/swiftmailer-bundle/Resources/views</argument>
         <argument>Swiftmailer</argument>
       </call>
       <call method="addPath">
-        <argument>/home/hugo/proyectos/app_futbol/app_futbol/vendor/doctrine/doctrine-bundle/Resources/views</argument>
+        <argument>/home/hugo/proyectos/app_futbol/vendor/doctrine/doctrine-bundle/Resources/views</argument>
         <argument>Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>/home/hugo/proyectos/app_futbol/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
+        <argument>/home/hugo/proyectos/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
         <argument>Debug</argument>
       </call>
       <call method="addPath">
-        <argument>/home/hugo/proyectos/app_futbol/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views</argument>
+        <argument>/home/hugo/proyectos/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views</argument>
         <argument>WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>/home/hugo/proyectos/app_futbol/app_futbol/app/Resources/views</argument>
+        <argument>/home/hugo/proyectos/app_futbol/app/Resources/views</argument>
       </call>
       <call method="addPath">
-        <argument>/home/hugo/proyectos/app_futbol/app_futbol/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form</argument>
+        <argument>/home/hugo/proyectos/app_futbol/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form</argument>
       </call>
     </service>
     <service id="twig.loader.chain" class="Twig\Loader\ChainLoader" public="false"/>
@@ -2380,7 +2493,7 @@
     <service id="twig.extension.code" class="Symfony\Bridge\Twig\Extension\CodeExtension" public="false">
       <tag name="twig.extension"/>
       <argument type="service" id="debug.file_link_formatter" on-invalid="ignore"/>
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol/app</argument>
+      <argument>/home/hugo/proyectos/app_futbol/app</argument>
       <argument>UTF-8</argument>
     </service>
     <service id="twig.extension.routing" class="Symfony\Bridge\Twig\Extension\RoutingExtension" public="false">
@@ -2464,40 +2577,40 @@
       <tag name="twig.loader"/>
       <argument type="service" id="templating.locator"/>
       <argument type="service" id="templating.name_parser"/>
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol</argument>
+      <argument>/home/hugo/proyectos/app_futbol</argument>
       <call method="addPath">
-        <argument>/home/hugo/proyectos/app_futbol/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views</argument>
+        <argument>/home/hugo/proyectos/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views</argument>
         <argument>Framework</argument>
       </call>
       <call method="addPath">
-        <argument>/home/hugo/proyectos/app_futbol/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views</argument>
+        <argument>/home/hugo/proyectos/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views</argument>
         <argument>Security</argument>
       </call>
       <call method="addPath">
-        <argument>/home/hugo/proyectos/app_futbol/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views</argument>
+        <argument>/home/hugo/proyectos/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views</argument>
         <argument>Twig</argument>
       </call>
       <call method="addPath">
-        <argument>/home/hugo/proyectos/app_futbol/app_futbol/vendor/symfony/swiftmailer-bundle/Resources/views</argument>
+        <argument>/home/hugo/proyectos/app_futbol/vendor/symfony/swiftmailer-bundle/Resources/views</argument>
         <argument>Swiftmailer</argument>
       </call>
       <call method="addPath">
-        <argument>/home/hugo/proyectos/app_futbol/app_futbol/vendor/doctrine/doctrine-bundle/Resources/views</argument>
+        <argument>/home/hugo/proyectos/app_futbol/vendor/doctrine/doctrine-bundle/Resources/views</argument>
         <argument>Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>/home/hugo/proyectos/app_futbol/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
+        <argument>/home/hugo/proyectos/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
         <argument>Debug</argument>
       </call>
       <call method="addPath">
-        <argument>/home/hugo/proyectos/app_futbol/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views</argument>
+        <argument>/home/hugo/proyectos/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views</argument>
         <argument>WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>/home/hugo/proyectos/app_futbol/app_futbol/app/Resources/views</argument>
+        <argument>/home/hugo/proyectos/app_futbol/app/Resources/views</argument>
       </call>
       <call method="addPath">
-        <argument>/home/hugo/proyectos/app_futbol/app_futbol/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form</argument>
+        <argument>/home/hugo/proyectos/app_futbol/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form</argument>
       </call>
     </service>
     <service id="templating.engine.twig" class="Symfony\Bundle\TwigBundle\TwigEngine" public="false">
@@ -2549,7 +2662,7 @@
     </service>
     <service id="monolog.processor.psr_log_message" class="Monolog\Processor\PsrLogMessageProcessor" public="false"/>
     <service id="monolog.handler.main" class="Monolog\Handler\StreamHandler">
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol/var/logs/dev.log</argument>
+      <argument>/home/hugo/proyectos/app_futbol/var/logs/dev.log</argument>
       <argument>100</argument>
       <argument>true</argument>
       <argument>null</argument>
@@ -2568,9 +2681,9 @@
       <argument>100</argument>
       <argument>true</argument>
     </service>
-    <service id="3_b668dd916c299300b2d8066103481155cfc3d6d4e16f7e737bc2ba8771588046" class="Swift_Transport_Esmtp_Auth_PlainAuthenticator" public="false"/>
-    <service id="2_b668dd916c299300b2d8066103481155cfc3d6d4e16f7e737bc2ba8771588046" class="Swift_Transport_Esmtp_Auth_LoginAuthenticator" public="false"/>
-    <service id="1_b668dd916c299300b2d8066103481155cfc3d6d4e16f7e737bc2ba8771588046" class="Swift_Transport_Esmtp_Auth_CramMd5Authenticator" public="false"/>
+    <service id="3_716e1af151f945d30a3217575f2e2fe7815991c5486394901b02a774778beaa4" class="Swift_Transport_Esmtp_Auth_PlainAuthenticator" public="false"/>
+    <service id="2_716e1af151f945d30a3217575f2e2fe7815991c5486394901b02a774778beaa4" class="Swift_Transport_Esmtp_Auth_LoginAuthenticator" public="false"/>
+    <service id="1_716e1af151f945d30a3217575f2e2fe7815991c5486394901b02a774778beaa4" class="Swift_Transport_Esmtp_Auth_CramMd5Authenticator" public="false"/>
     <service id="swiftmailer.mailer.abstract" class="Swift_Mailer" abstract="true">
       <argument type="service" id="swiftmailer.transport"/>
     </service>
@@ -2587,9 +2700,9 @@
     </service>
     <service id="swiftmailer.transport.authhandler.abstract" class="Swift_Transport_Esmtp_AuthHandler" public="false" abstract="true">
       <argument type="collection">
-        <argument type="service" id="1_b668dd916c299300b2d8066103481155cfc3d6d4e16f7e737bc2ba8771588046"/>
-        <argument type="service" id="2_b668dd916c299300b2d8066103481155cfc3d6d4e16f7e737bc2ba8771588046"/>
-        <argument type="service" id="3_b668dd916c299300b2d8066103481155cfc3d6d4e16f7e737bc2ba8771588046"/>
+        <argument type="service" id="1_716e1af151f945d30a3217575f2e2fe7815991c5486394901b02a774778beaa4"/>
+        <argument type="service" id="2_716e1af151f945d30a3217575f2e2fe7815991c5486394901b02a774778beaa4"/>
+        <argument type="service" id="3_716e1af151f945d30a3217575f2e2fe7815991c5486394901b02a774778beaa4"/>
       </argument>
     </service>
     <service id="swiftmailer.transport.eventdispatcher.abstract" class="Swift_Events_SimpleEventDispatcher" public="false" abstract="true"/>
@@ -2601,7 +2714,7 @@
     <service id="swiftmailer.transport.smtp.abstract" class="Swift_Transport_EsmtpTransport" public="false" abstract="true"/>
     <service id="swiftmailer.transport.spool.abstract" class="Swift_Transport_SpoolTransport" public="false" abstract="true"/>
     <service id="swiftmailer.spool.file.abstract" class="Swift_FileSpool" public="false" abstract="true">
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol/app/../data/swiftmailer/spool</argument>
+      <argument>/home/hugo/proyectos/app_futbol/app/../data/swiftmailer/spool</argument>
     </service>
     <service id="swiftmailer.spool.memory.abstract" class="Swift_MemorySpool" public="false" abstract="true"/>
     <service id="swiftmailer.email_sender.listener" class="Symfony\Bundle\SwiftmailerBundle\EventListener\EmailSenderListener">
@@ -2616,9 +2729,9 @@
     <service id="swiftmailer.mailer.default.transport.eventdispatcher" class="Swift_Events_SimpleEventDispatcher" public="false"/>
     <service id="swiftmailer.mailer.default.transport.authhandler" class="Swift_Transport_Esmtp_AuthHandler" public="false">
       <argument type="collection">
-        <argument type="service" id="1_b668dd916c299300b2d8066103481155cfc3d6d4e16f7e737bc2ba8771588046"/>
-        <argument type="service" id="2_b668dd916c299300b2d8066103481155cfc3d6d4e16f7e737bc2ba8771588046"/>
-        <argument type="service" id="3_b668dd916c299300b2d8066103481155cfc3d6d4e16f7e737bc2ba8771588046"/>
+        <argument type="service" id="1_716e1af151f945d30a3217575f2e2fe7815991c5486394901b02a774778beaa4"/>
+        <argument type="service" id="2_716e1af151f945d30a3217575f2e2fe7815991c5486394901b02a774778beaa4"/>
+        <argument type="service" id="3_716e1af151f945d30a3217575f2e2fe7815991c5486394901b02a774778beaa4"/>
       </argument>
       <call method="setUsername">
         <argument>null</argument>
@@ -2763,7 +2876,7 @@
         <argument key="driver">pdo_mysql</argument>
         <argument key="host">127.0.0.1</argument>
         <argument key="port">null</argument>
-        <argument key="dbname">futbol</argument>
+        <argument key="dbname">app_f</argument>
         <argument key="user">root</argument>
         <argument key="password">null</argument>
         <argument key="charset">UTF8</argument>
@@ -2813,7 +2926,9 @@
     <service id="doctrine.orm.quote_strategy.ansi" class="Doctrine\ORM\Mapping\AnsiQuoteStrategy" public="false"/>
     <service id="doctrine.orm.default_configuration" class="Doctrine\ORM\Configuration" public="false">
       <call method="setEntityNamespaces">
-        <argument type="collection"/>
+        <argument type="collection">
+          <argument key="AppBundle">AppBundle\Entity</argument>
+        </argument>
       </call>
       <call method="setMetadataCacheImpl">
         <argument type="service" id="doctrine_cache.providers.doctrine.orm.default_metadata_cache"/>
@@ -2828,7 +2943,7 @@
         <argument type="service" id="doctrine.orm.default_metadata_driver"/>
       </call>
       <call method="setProxyDir">
-        <argument>/home/hugo/proyectos/app_futbol/app_futbol/var/cache/dev/doctrine/orm/Proxies</argument>
+        <argument>/home/hugo/proyectos/app_futbol/var/cache/dev/doctrine/orm/Proxies</argument>
       </call>
       <call method="setProxyNamespace">
         <argument>Proxies</argument>
@@ -2852,20 +2967,33 @@
         <argument type="service" id="doctrine.orm.default_entity_listener_resolver"/>
       </call>
     </service>
-    <service id="doctrine.orm.default_metadata_driver" class="Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain" public="false"/>
+    <service id="doctrine.orm.default_yml_metadata_driver" class="Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver" public="false">
+      <argument type="collection">
+        <argument key="/home/hugo/proyectos/app_futbol/src/AppBundle/Resources/config/doctrine">AppBundle\Entity</argument>
+      </argument>
+      <call method="setGlobalBasename">
+        <argument>mapping</argument>
+      </call>
+    </service>
+    <service id="doctrine.orm.default_metadata_driver" class="Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain" public="false">
+      <call method="addDriver">
+        <argument type="service" id="doctrine.orm.default_yml_metadata_driver"/>
+        <argument>AppBundle\Entity</argument>
+      </call>
+    </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_metadata_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
-        <argument>sf_orm_default_392fbd7cdf5181083b0ea45e8a300bff159b6b909c04aaf8dc9160dd29d9d87f</argument>
+        <argument>sf_orm_default_0d72c25c457faf4e913d427ddfbd51554e67e4258c15fe062ca6e34d8395cf4c</argument>
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_result_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
-        <argument>sf_orm_default_392fbd7cdf5181083b0ea45e8a300bff159b6b909c04aaf8dc9160dd29d9d87f</argument>
+        <argument>sf_orm_default_0d72c25c457faf4e913d427ddfbd51554e67e4258c15fe062ca6e34d8395cf4c</argument>
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_query_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
-        <argument>sf_orm_default_392fbd7cdf5181083b0ea45e8a300bff159b6b909c04aaf8dc9160dd29d9d87f</argument>
+        <argument>sf_orm_default_0d72c25c457faf4e913d427ddfbd51554e67e4258c15fe062ca6e34d8395cf4c</argument>
       </call>
     </service>
     <service id="doctrine.orm.default_entity_listener_resolver" class="Doctrine\Bundle\DoctrineBundle\Mapping\ContainerAwareEntityListenerResolver">
@@ -2995,7 +3123,7 @@
         </argument>
       </call>
     </service>
-    <service id="2_767aa2e9da87c1c42c2377e53144d28c4c132e87919a7d6c21ec5c050d152a93" class="Symfony\Component\VarDumper\Dumper\HtmlDumper" public="false">
+    <service id="2_3f699b8151e3a9cab9159d769bad7fe4ae276848410050a4414d916719856409" class="Symfony\Component\VarDumper\Dumper\HtmlDumper" public="false">
       <argument>null</argument>
       <argument>UTF-8</argument>
       <argument>1</argument>
@@ -3006,7 +3134,7 @@
         </argument>
       </call>
     </service>
-    <service id="1_767aa2e9da87c1c42c2377e53144d28c4c132e87919a7d6c21ec5c050d152a93" class="Symfony\Bundle\WebProfilerBundle\Csp\NonceGenerator" public="false"/>
+    <service id="1_3f699b8151e3a9cab9159d769bad7fe4ae276848410050a4414d916719856409" class="Symfony\Bundle\WebProfilerBundle\Csp\NonceGenerator" public="false"/>
     <service id="web_profiler.controller.profiler" class="Symfony\Bundle\WebProfilerBundle\Controller\ProfilerController">
       <argument type="service" id="router.default" on-invalid="null"/>
       <argument type="service" id="profiler" on-invalid="null"/>
@@ -3079,7 +3207,7 @@
       </argument>
       <argument>bottom</argument>
       <argument type="service" id="web_profiler.csp.handler"/>
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol</argument>
+      <argument>/home/hugo/proyectos/app_futbol</argument>
     </service>
     <service id="web_profiler.controller.router" class="Symfony\Bundle\WebProfilerBundle\Controller\RouterController">
       <argument type="service" id="profiler" on-invalid="null"/>
@@ -3092,11 +3220,11 @@
       <argument>true</argument>
     </service>
     <service id="web_profiler.csp.handler" class="Symfony\Bundle\WebProfilerBundle\Csp\ContentSecurityPolicyHandler" public="false">
-      <argument type="service" id="1_767aa2e9da87c1c42c2377e53144d28c4c132e87919a7d6c21ec5c050d152a93"/>
+      <argument type="service" id="1_3f699b8151e3a9cab9159d769bad7fe4ae276848410050a4414d916719856409"/>
     </service>
     <service id="twig.extension.webprofiler" class="Symfony\Bundle\WebProfilerBundle\Twig\WebProfilerExtension" public="false">
       <tag name="twig.extension"/>
-      <argument type="service" id="2_767aa2e9da87c1c42c2377e53144d28c4c132e87919a7d6c21ec5c050d152a93"/>
+      <argument type="service" id="2_3f699b8151e3a9cab9159d769bad7fe4ae276848410050a4414d916719856409"/>
     </service>
     <service id="web_profiler.debug_toolbar" class="Symfony\Bundle\WebProfilerBundle\EventListener\WebDebugToolbarListener">
       <tag name="kernel.event_subscriber"/>
@@ -3115,12 +3243,12 @@
     </service>
     <service id="web_server.command.server_run" class="Symfony\Bundle\WebServerBundle\Command\ServerRunCommand" public="false">
       <tag name="console.command"/>
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol/public</argument>
+      <argument>/home/hugo/proyectos/app_futbol/public</argument>
       <argument>dev</argument>
     </service>
     <service id="web_server.command.server_start" class="Symfony\Bundle\WebServerBundle\Command\ServerStartCommand" public="false">
       <tag name="console.command"/>
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol/public</argument>
+      <argument>/home/hugo/proyectos/app_futbol/public</argument>
       <argument>dev</argument>
     </service>
     <service id="web_server.command.server_stop" class="Symfony\Bundle\WebServerBundle\Command\ServerStopCommand" public="false">
@@ -3129,19 +3257,31 @@
     <service id="web_server.command.server_status" class="Symfony\Bundle\WebServerBundle\Command\ServerStatusCommand" public="false">
       <tag name="console.command"/>
     </service>
-    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\DefaultController" class="AppBundle\Controller\DefaultController" autowire="true" abstract="true"/>
-    <service id="abstract.instanceof.AppBundle\Controller\DefaultController" class="AppBundle\Controller\DefaultController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id="service_locator.4f8384c8862c511eefe34301cff90111" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\UserController" class="AppBundle\Controller\UserController" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.AppBundle\Controller\UserController" class="AppBundle\Controller\UserController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.AppBundle\Form\RegisterType" class="AppBundle\Form\RegisterType" public="false" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.AppBundle\Form\RegisterType" class="AppBundle\Form\RegisterType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="service_locator.4f27295e1ee3cd81c185c2a4cb89efcf" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection"/>
     </service>
-    <service id="service_locator.ebdaf59977bc26dc6a191d4f5f8254cb" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection"/>
-    </service>
-    <service id="service_locator.ceb8bbb9f48e8bfd1c8ec2d209eabdca" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.767f541726fe8f827806eaeb035c7c87" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="authUtils" type="service" id="security.authentication_utils" on-invalid="ignore"/>
+      </argument>
+    </service>
+    <service id="service_locator.b8bfd291cdcc7c2aa1150160993f981f" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="AppBundle\Controller\UserController:loginAction" type="service" id="service_locator.767f541726fe8f827806eaeb035c7c87"/>
+        <argument key="AppBundle\Controller\UserController::loginAction" type="service" id="service_locator.767f541726fe8f827806eaeb035c7c87"/>
+      </argument>
+    </service>
+    <service id="service_locator.ef358fc66c81cca76aadbff23e5dcdee" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="AppBundle\Form\RegisterType" type="service" id="AppBundle\Form\RegisterType"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="service" id="form.type.form"/>
@@ -3341,42 +3481,42 @@
       <argument>true</argument>
     </service>
     <service id="cache.app.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter" public="false" lazy="true">
-      <argument>q3Y1tRRmkN</argument>
+      <argument>xzN7OQW9Tb</argument>
       <argument>0</argument>
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol/var/cache/dev/pools</argument>
+      <argument>/home/hugo/proyectos/app_futbol/var/cache/dev/pools</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
     </service>
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
-      <argument>IMjGielFDU</argument>
+      <argument>JGfCn0Jtvw</argument>
       <argument>0</argument>
-      <argument>24v+noEsDpk5hnD8xvRlHt</argument>
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol/var/cache/dev/pools</argument>
+      <argument>D9Ozb6U-CRnQ808PPY70CH</argument>
+      <argument>/home/hugo/proyectos/app_futbol/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
-      <argument>XztcJEg8nS</argument>
+      <argument>9jgWyxD-NM</argument>
       <argument>0</argument>
-      <argument>24v+noEsDpk5hnD8xvRlHt</argument>
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol/var/cache/dev/pools</argument>
+      <argument>D9Ozb6U-CRnQ808PPY70CH</argument>
+      <argument>/home/hugo/proyectos/app_futbol/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
-      <argument>cvsH4Bn-Pd</argument>
+      <argument>0oKLlKt7yN</argument>
       <argument>0</argument>
-      <argument>24v+noEsDpk5hnD8xvRlHt</argument>
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol/var/cache/dev/pools</argument>
+      <argument>D9Ozb6U-CRnQ808PPY70CH</argument>
+      <argument>/home/hugo/proyectos/app_futbol/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
-      <argument>XzPhekROAc</argument>
+      <argument>+aVgJE-4ra</argument>
       <argument>0</argument>
-      <argument>24v+noEsDpk5hnD8xvRlHt</argument>
-      <argument>/home/hugo/proyectos/app_futbol/app_futbol/var/cache/dev/pools</argument>
+      <argument>D9Ozb6U-CRnQ808PPY70CH</argument>
+      <argument>/home/hugo/proyectos/app_futbol/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -3478,7 +3618,7 @@
     <service id="console.command.symfony_bundle_webserverbundle_command_serverstopcommand" alias="web_server.command.server_stop"/>
     <service id="console.command.symfony_bundle_webserverbundle_command_serverstatuscommand" alias="web_server.command.server_status"/>
     <service id="twig.loader" alias="twig.loader.filesystem"/>
-    <service id="service_locator.b8d2046fb854cde05549fb309e1a80d2" alias="1_dabf72ae32bf532b78bf8690f490ea33e851e61dff1ce6d105f608e9880110bb" public="false"/>
+    <service id="service_locator.b8d2046fb854cde05549fb309e1a80d2" alias="1_b37803b1afe72cc8043c4a28d3b683d34c9c6733980307e6b8d71033740dd93b" public="false"/>
     <service id="event_dispatcher" alias="debug.event_dispatcher"/>
     <service id="controller_resolver" alias="debug.controller_resolver" public="false"/>
     <service id="argument_resolver" alias="debug.argument_resolver" public="false"/>

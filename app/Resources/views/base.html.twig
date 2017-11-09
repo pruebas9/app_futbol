@@ -1,13 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}App_f la aplicación de fútbol{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">          
+            <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/bootstrap.min.css') }}"/>
+            <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/bootstrap.css') }}"/>
+            <!--<link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/style.css') }}"/>-->
+            <!--<link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/animate.css') }}">-->
+            <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/estilos.css') }}"/>
+            <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('/favicon.ico') }}" />
     </head>
     <body>
+        <header>
+            <nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+                    <div clas="navbar-header">
+			<button type="button" class="navbar-toogle collapse" data-toogle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Navegación</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="{{path('user_home')}}">
+                            <!--<span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>-->
+                            <span class="fa fa-futbol-o" aria-hidden="true"></span>
+                            PZ fútbol
+			</a>
+                    </div>
+						
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+						
+			<!--Vamos a indicar que esto se vea solo cuando no se haya iniciado sesión-->
+			{% if app.user == null %}
+                            <li>
+                                <a href="{{ path('login')}}">
+                                    <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                                    &nbsp;Entrar
+				</a>
+                            </li>
+                            <li>
+				<a href="{{ path('register')}}">
+                                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                    &nbsp;Registro
+				</a>
+                            </li>
+                        <!-- Cuando se haya iniciado sesión se mostrará esto -->
+                        {% else %}
+                            <li>
+				<a href="{{ path('user_home')}}">
+                                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span> 
+                                    &nbsp;Inicio
+				</a>
+                            </li>
+                            <li>
+				<a href="{{ path('jugadores')}}">
+                                    <span class="fa fa-users" aria-hidden="true"></span> 
+                                    &nbsp;Jugadores
+				</a>
+                            </li>
+                            <li>
+				<a href="#">
+                                    <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> 
+                                    &nbsp;Pabellones
+				</a>
+                            </li>
+                        {% endif %}
+			</ul>
+								
+			<!-- Vamos a hacer una sección que sólo se va a ver si hemos iniciado sesión -->
+			{% if app.user != null %}
+                            <ul class="nav navbar-nav navbar-right">
+				<li>
+                                    <a href="#">
+					<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> 
+                                        &nbsp;Mensajes privados
+					<span class="label label-success label-notifications-msg"></span>
+                                    </a>
+				</li>
+				<li>
+                                    <a href="#">
+					<span class="glyphicon glyphicon-bell" aria-hidden="true"></span> 
+					&nbsp;Notificaciones
+                                        <span class="label label-success label-notifications"></span>
+                                    </a>
+				</li>
+				<li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+									
+                                    <!-- Mostrar el avatar del usuario -->
+                                    <div class="avatar">
+                                        {% if app.user.image == null %}
+                                            <img src="{{ asset('/assets/images/default.png')}}"/>
+                                        {% else %}
+                                            <img src="#"/>
+                                        {% endif %}
+                                    </div>
+                                    <!-- Mostramos el nombre del usuario -->
+                                    {{app.user.name}} {{app.user.surname}}
+                                    <span class="caret"></span>
+                                    </a>
+                                  
+                                    
+                                </li>
+                                <li>
+                                    <a href="{{path('logout')}}">
+					<span class="fa fa-power-off fa-lg" aria-hidden="true"></span> 
+					&nbsp;Salir          
+                                    </a>
+				</li>
+                                </ul>
+                            {% endif %}
+			</div>
+		</header>
+                <section id="content">
+                    <div class="container">
+                        <div class="col-lg-10">
+                            {% for message in app.session.flashbag().get('message')%}
+                                <div class="alert alert-success">{{message}}</div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                        <div class="clearfix"></div>
+                        {% block content %}
+                        {% endblock %}
+                </section>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        
+        {% block javascripts %}
+            <script>
+                //función twig para sacar la url del proyecto
+                var URL = "{{ app.request.getSchemeAndHttpHost() }}";
+            </script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <script src="{{ asset('/assets/js/jquery-2.1.1.js') }}"></script>
+            <script src="{{ asset('/assets/js/bootstrap.min.js') }}"></script>
+        {% endblock %}
     </body>
 </html>
