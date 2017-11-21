@@ -139,4 +139,3 @@ class Pabellon
         return $this->email;
     }
 }
-

@@ -60,7 +60,7 @@ class RegisterType extends AbstractType
                 ))
                 ->add('Registrarse', SubmitType::class, array(
                     'attr' => array(
-                        'class' => 'form-submit btn btn-success'
+                        'class' => 'form-submit btn btn-success block full-width m-b submit'
                     )
                 ));
     }

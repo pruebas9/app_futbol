@@ -123,8 +123,14 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         // user_home
         if ('/home' === $pathinfo) {
+            if ('GET' !== $canonicalMethod) {
+                $allow[] = 'GET';
+                goto not_user_home;
+            }
+
             return array (  '_controller' => 'AppBundle\\Controller\\UserController::indexAction',  '_route' => 'user_home',);
         }
+        not_user_home:
 
         // register
         if ('/register' === $pathinfo) {
@@ -145,6 +151,27 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         // jugadores
         if ('/jugadores' === $pathinfo) {
             return array (  '_controller' => 'AppBundle\\Controller\\UserController::jugadoresAction',  '_route' => 'jugadores',);
+        }
+
+        // get-eventos
+        if ('/get-events' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\EventoController::getEventAction',  '_route' => 'get-eventos',);
+        }
+
+        // add-event
+        if ('/add-event' === $pathinfo) {
+            if ('POST' !== $canonicalMethod) {
+                $allow[] = 'POST';
+                goto not_addevent;
+            }
+
+            return array (  '_controller' => 'AppBundle\\Controller\\EventoController::addEventAction',  '_route' => 'add-event',);
+        }
+        not_addevent:
+
+        // add-partido
+        if ('/add-partido' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\EventoController::addPartidoAction',  '_route' => 'add-partido',);
         }
 
         // app_homepage

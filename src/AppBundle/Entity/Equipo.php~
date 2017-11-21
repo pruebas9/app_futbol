@@ -52,4 +52,3 @@ class Equipo
         return $this->name;
     }
 }
-

@@ -1,0 +1,47 @@
+AppBundle\Entity\PartidosEvento:
+    type: entity
+    table: partidos_evento
+    indexes:
+        fk_partidos_pabellon:
+            columns:
+                - id_pabellon
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombre:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: Nombre
+        start:
+            type: datetime
+            nullable: false
+        end:
+            type: datetime
+            nullable: true
+        jugado:
+            type: boolean
+            nullable: true
+            options:
+                default: '0'
+    manyToOne:
+        idPabellon:
+            targetEntity: Pabellon
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_pabellon:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

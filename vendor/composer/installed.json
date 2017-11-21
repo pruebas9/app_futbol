@@ -2432,5 +2432,53 @@
         ],
         "description": "Symfony PHPUnit Bridge",
         "homepage": "https://symfony.com"
+    },
+    {
+        "name": "stephanecollot/datetimepicker-bundle",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "target-dir": "SC/DatetimepickerBundle",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/stephanecollot/DatetimepickerBundle.git",
+            "reference": "ebecd027c702816bc86e6727c8075a67b01a43f1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/stephanecollot/DatetimepickerBundle/zipball/ebecd027c702816bc86e6727c8075a67b01a43f1",
+            "reference": "ebecd027c702816bc86e6727c8075a67b01a43f1",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.9",
+            "symfony/framework-bundle": "~2.8 || ~3.0",
+            "symfony/symfony": "~2.8 || ~3.0"
+        },
+        "time": "2017-04-29 09:13:09",
+        "type": "symfony-bundle",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "SC\\DatetimepickerBundle": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Stephane Collot"
+            }
+        ],
+        "description": "Symfony bundle for Bootstrap DateTime picker",
+        "keywords": [
+            "bootstrap",
+            "bundle",
+            "datepicker",
+            "picker",
+            "symfony",
+            "timepicker"
+        ]
     }
 ]

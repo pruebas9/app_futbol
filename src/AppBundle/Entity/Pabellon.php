@@ -138,4 +138,13 @@ class Pabellon
     {
         return $this->email;
     }
+    
+    /**
+     *
+     * @return string
+     */
+//    public function __toString()
+//    {
+//        return $this->getNombre();
+//    }
 }

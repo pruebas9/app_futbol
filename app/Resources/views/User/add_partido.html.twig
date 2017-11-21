@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{ parent()}}    
+    {{ form_stylesheet(form) }}
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    {{ form_javascript(form) }}           
+</script>            
+{% endblock %}
+{% block content %}
+    <div class="col-lg-6 box-form">
+        <div class="middle-box text-center loginscreen animated fadeInDown">
+        <div>
+            <div>
+
+                <h1 class="logo-name">PZ</h1>
+
+            </div>
+            <h3>Bienvenido a Pintxos y Zuritos</h3>
+            
+            <p>Crear Partido</p>
+            
+            {{ form_start(form, {'action':'', 'method':'POST'}) }}
+            {{ form_widget(form) }}
+            {{ form_errors(form) }}
+            {{ form_end(form) }}
+        </div>
+    </div>
+        
+
+{% endblock%}
+
+

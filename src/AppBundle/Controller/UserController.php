@@ -100,7 +100,7 @@ class UserController extends Controller
                     $flush = $em->flush();
                     
                     if($flush == null){
-                        $status = 'El usuario se ha registrado correctamente'; 
+                        $status = 'Usuario registrado correctamente'; 
                         
                         $this->session->getFlashBag()->add('message', $status);
                         
@@ -129,17 +129,12 @@ class UserController extends Controller
     public function jugadoresAction(Request $request){
         
         $em = $this->getDoctrine()->getManager();
-        $user_repo = $em->getRepository('AppBundle:User');
-        
+        $user_repo = $em->getRepository('AppBundle:User');        
         $users = $user_repo->findAll();
         
-
-        // replace this example code with whatever you need
         return $this->render('User/jugadores.html.twig', array(
             'users' => $users
-        )
-            
-        );
+        ));
     }
     
     /*
@@ -163,6 +158,6 @@ class UserController extends Controller
         }
         
         return new Response($respuesta);       
-    }
+    }    
        
 }

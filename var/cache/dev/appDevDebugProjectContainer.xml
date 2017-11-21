@@ -17,6 +17,7 @@
       <parameter key="DoctrineBundle">Doctrine\Bundle\DoctrineBundle\DoctrineBundle</parameter>
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
       <parameter key="AppBundle">AppBundle\AppBundle</parameter>
+      <parameter key="SCDatetimepickerBundle">SC\DatetimepickerBundle\SCDatetimepickerBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -63,6 +64,11 @@
         <parameter key="parent">null</parameter>
         <parameter key="path">/home/hugo/proyectos/app_futbol/src/AppBundle</parameter>
         <parameter key="namespace">AppBundle</parameter>
+      </parameter>
+      <parameter key="SCDatetimepickerBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">/home/hugo/proyectos/app_futbol/vendor/stephanecollot/datetimepicker-bundle/SC/DatetimepickerBundle</parameter>
+        <parameter key="namespace">SC\DatetimepickerBundle</parameter>
       </parameter>
       <parameter key="DebugBundle" type="collection">
         <parameter key="parent">null</parameter>
@@ -158,6 +164,9 @@
     <parameter key="twig.exception_listener.controller">twig.controller.exception:showAction</parameter>
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
+      <parameter>SCDatetimepickerBundle:Form:div_layout.html.twig</parameter>
+      <parameter>SCDatetimepickerBundle:Form:jquery_layout.html.twig</parameter>
+      <parameter>SCDatetimepickerBundle:Form:stylesheet_layout.html.twig</parameter>
     </parameter>
     <parameter key="monolog.use_microseconds">true</parameter>
     <parameter key="monolog.swift_mailer.handlers" type="collection"/>
@@ -333,6 +342,9 @@
     <parameter key="sensio_framework_extra.converter.doctrine.class">Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\DoctrineParamConverter</parameter>
     <parameter key="sensio_framework_extra.converter.datetime.class">Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\DateTimeParamConverter</parameter>
     <parameter key="sensio_framework_extra.view.listener.class">Sensio\Bundle\FrameworkExtraBundle\EventListener\TemplateListener</parameter>
+    <parameter key="sc_datetimepicker.form.options" type="collection">
+      <parameter key="formatter">js</parameter>
+    </parameter>
     <parameter key="web_profiler.debug_toolbar.position">bottom</parameter>
     <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
     <parameter key="web_profiler.debug_toolbar.mode">2</parameter>
@@ -414,8 +426,14 @@
   <services>
     <service id="service_container" class="Symfony\Component\DependencyInjection\ContainerInterface" synthetic="true"/>
     <service id="AppBundle\AppBundle" class="AppBundle\AppBundle" public="false" autowire="true" autoconfigure="true"/>
+    <service id="AppBundle\Controller\EventoController" class="AppBundle\Controller\EventoController" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+    </service>
     <service id="AppBundle\Controller\UserController" class="AppBundle\Controller\UserController" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
+    </service>
+    <service id="AppBundle\Form\AddPartidoType" class="AppBundle\Form\AddPartidoType" public="false" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
     </service>
     <service id="AppBundle\Form\RegisterType" class="AppBundle\Form\RegisterType" public="false" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
@@ -436,7 +454,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-50"/>
-      <argument type="service" id="service_locator.b8bfd291cdcc7c2aa1150160993f981f"/>
+      <argument type="service" id="service_locator.2cb62afec1feb37f6973c9b916270087"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-100"/>
@@ -604,7 +622,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>D9Ozb6U-CRnQ808PPY70CH</argument>
+      <argument>U1wE034x0E8FKDY+ONAhuL</argument>
       <argument>/home/hugo/proyectos/app_futbol/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -614,7 +632,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>D9Ozb6U-CRnQ808PPY70CH</argument>
+      <argument>U1wE034x0E8FKDY+ONAhuL</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -733,7 +751,7 @@
       <argument type="service" id="form.resolved_type_factory"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id="service_locator.ef358fc66c81cca76aadbff23e5dcdee"/>
+      <argument type="service" id="service_locator.ff6259b1e84c3a105b41565697205229"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.http_foundation"/>
@@ -1371,14 +1389,6 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -2270,12 +2280,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>5a049bb8ec5923.35921721</argument>
+      <argument>5a146098e19f81.40912216</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>5a049bb8ec5923.35921721</argument>
+      <argument>5a146098e19f81.40912216</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -2387,6 +2397,9 @@
         <argument type="service" id="doctrine.twig.doctrine_extension"/>
       </call>
       <call method="addExtension">
+        <argument type="service" id="sc_datetimepicker.twig.extension.form"/>
+      </call>
+      <call method="addExtension">
         <argument type="service" id="twig.extension.dump"/>
       </call>
       <call method="addExtension">
@@ -2455,6 +2468,10 @@
       <call method="addPath">
         <argument>/home/hugo/proyectos/app_futbol/vendor/doctrine/doctrine-bundle/Resources/views</argument>
         <argument>Doctrine</argument>
+      </call>
+      <call method="addPath">
+        <argument>/home/hugo/proyectos/app_futbol/vendor/stephanecollot/datetimepicker-bundle/SC/DatetimepickerBundle/Resources/views</argument>
+        <argument>SCDatetimepicker</argument>
       </call>
       <call method="addPath">
         <argument>/home/hugo/proyectos/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
@@ -2565,6 +2582,9 @@
     <service id="twig.form.engine" class="Symfony\Bridge\Twig\Form\TwigRendererEngine" public="false">
       <argument type="collection">
         <argument>form_div_layout.html.twig</argument>
+        <argument>SCDatetimepickerBundle:Form:div_layout.html.twig</argument>
+        <argument>SCDatetimepickerBundle:Form:jquery_layout.html.twig</argument>
+        <argument>SCDatetimepickerBundle:Form:stylesheet_layout.html.twig</argument>
       </argument>
       <argument type="service" id="twig"/>
     </service>
@@ -2597,6 +2617,10 @@
       <call method="addPath">
         <argument>/home/hugo/proyectos/app_futbol/vendor/doctrine/doctrine-bundle/Resources/views</argument>
         <argument>Doctrine</argument>
+      </call>
+      <call method="addPath">
+        <argument>/home/hugo/proyectos/app_futbol/vendor/stephanecollot/datetimepicker-bundle/SC/DatetimepickerBundle/Resources/views</argument>
+        <argument>SCDatetimepicker</argument>
       </call>
       <call method="addPath">
         <argument>/home/hugo/proyectos/app_futbol/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
@@ -3082,6 +3106,16 @@
       <argument type="service" id="security.authorization_checker" on-invalid="null"/>
     </service>
     <service id="sensio_framework_extra.security.expression_language.default" class="Sensio\Bundle\FrameworkExtraBundle\Security\ExpressionLanguage" public="false"/>
+    <service id="sc_datetimepicker.twig.extension.form" class="SC\DatetimepickerBundle\Twig\Extension\FormExtension">
+      <tag name="twig.extension"/>
+      <argument type="service" id="twig.form.renderer"/>
+    </service>
+    <service id="sc_datetimepicker.form.type.datetime" class="SC\DatetimepickerBundle\Form\Type\DatetimeType">
+      <tag name="form.type" alias="collot_datetime"/>
+      <argument type="collection">
+        <argument key="formatter">js</argument>
+      </argument>
+    </service>
     <service id="twig.extension.dump" class="Symfony\Bridge\Twig\Extension\DumpExtension" public="false">
       <tag name="twig.extension"/>
       <argument type="service" id="var_dumper.cloner"/>
@@ -3257,10 +3291,18 @@
     <service id="web_server.command.server_status" class="Symfony\Bundle\WebServerBundle\Command\ServerStatusCommand" public="false">
       <tag name="console.command"/>
     </service>
+    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\EventoController" class="AppBundle\Controller\EventoController" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.AppBundle\Controller\EventoController" class="AppBundle\Controller\EventoController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\UserController" class="AppBundle\Controller\UserController" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.AppBundle\Controller\UserController" class="AppBundle\Controller\UserController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.AppBundle\Form\AddPartidoType" class="AppBundle\Form\AddPartidoType" public="false" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.AppBundle\Form\AddPartidoType" class="AppBundle\Form\AddPartidoType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.AppBundle\Form\RegisterType" class="AppBundle\Form\RegisterType" public="false" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.AppBundle\Form\RegisterType" class="AppBundle\Form\RegisterType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="service_locator.46e21cc30fcad819c38738d859074781" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
     <service id="service_locator.4f27295e1ee3cd81c185c2a4cb89efcf" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection"/>
@@ -3271,17 +3313,19 @@
         <argument key="authUtils" type="service" id="security.authentication_utils" on-invalid="ignore"/>
       </argument>
     </service>
-    <service id="service_locator.b8bfd291cdcc7c2aa1150160993f981f" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.2cb62afec1feb37f6973c9b916270087" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="AppBundle\Controller\UserController:loginAction" type="service" id="service_locator.767f541726fe8f827806eaeb035c7c87"/>
         <argument key="AppBundle\Controller\UserController::loginAction" type="service" id="service_locator.767f541726fe8f827806eaeb035c7c87"/>
       </argument>
     </service>
-    <service id="service_locator.ef358fc66c81cca76aadbff23e5dcdee" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.ff6259b1e84c3a105b41565697205229" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="AppBundle\Form\AddPartidoType" type="service" id="AppBundle\Form\AddPartidoType"/>
         <argument key="AppBundle\Form\RegisterType" type="service" id="AppBundle\Form\RegisterType"/>
+        <argument key="SC\DatetimepickerBundle\Form\Type\DatetimeType" type="service" id="sc_datetimepicker.form.type.datetime"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="service" id="form.type.form"/>
@@ -3491,7 +3535,7 @@
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>JGfCn0Jtvw</argument>
       <argument>0</argument>
-      <argument>D9Ozb6U-CRnQ808PPY70CH</argument>
+      <argument>U1wE034x0E8FKDY+ONAhuL</argument>
       <argument>/home/hugo/proyectos/app_futbol/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -3499,7 +3543,7 @@
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>9jgWyxD-NM</argument>
       <argument>0</argument>
-      <argument>D9Ozb6U-CRnQ808PPY70CH</argument>
+      <argument>U1wE034x0E8FKDY+ONAhuL</argument>
       <argument>/home/hugo/proyectos/app_futbol/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -3507,7 +3551,7 @@
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>0oKLlKt7yN</argument>
       <argument>0</argument>
-      <argument>D9Ozb6U-CRnQ808PPY70CH</argument>
+      <argument>U1wE034x0E8FKDY+ONAhuL</argument>
       <argument>/home/hugo/proyectos/app_futbol/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -3515,7 +3559,7 @@
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>+aVgJE-4ra</argument>
       <argument>0</argument>
-      <argument>D9Ozb6U-CRnQ808PPY70CH</argument>
+      <argument>U1wE034x0E8FKDY+ONAhuL</argument>
       <argument>/home/hugo/proyectos/app_futbol/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>

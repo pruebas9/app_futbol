@@ -1,17 +1,116 @@
 {% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel='stylesheet' href="{{ asset('/assets/js/fullcalendar/fullcalendar.css') }}" />
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('/assets/js/plugins/fullcalendar/moment.min.js') }}"></script>
+    <!--<script src="{{ asset('/assets/js/lib/moment.min.js') }}"></script>-->
+    <script src="{{ asset('/assets/js/fullcalendar/fullcalendar.js') }}"></script>
+    <script src="{{ asset('/assets/js/fullcalendar/locale/es.js') }}"></script>
+    <script src="{{ asset('/assets/js/custom/calendar.js') }}"></script>
+    <script>
+        //Ejemplos: 
+        //http://develoteca.com/usar-full-calendar/
+        //http://developer-paradize.blogspot.com.es/2013/06/jquery-fullcalendar-integration-with.html
+        //https://es.stackoverflow.com/questions/tagged/fullcalendar
+        $(document).ready(function() {
+ 
+            var date = new Date();
+            var d = date.getDate();
+            var m = date.getMonth();
+            var y = date.getFullYear();
 
+            $('#calendar').fullCalendar({
+		header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek'
+		},
+                
+                
+                    editable: true,
+                    events: [
+                        {
+                            id: 1,
+                            title: 'Partido',
+                            start: '2017-11-10 20:00:00',
+                            end: '2017-11-10 22:00:00',
+                            
+                        },                  
+                        {
+                            id: 2,
+                            title: 'Partido',
+                            start: '2017-11-15 21:00:00',
+                            end: '2017-11-15 22:00:00',
+                                                       
+                        }                    
+                    ],
+                    
+                    dayClick: function(date, jsEvent, view) {
+
+                        //alert('Clicked on: ' + date.format());
+                        console.log(date.format()+" 21:00:00");
+                        //console.log("start: "+date.start._i);
+                        //console.log("end: "+event.end._i);
+
+                        $.ajax({
+                            url: URL + '/add-event',
+                            data: {title: 'Pachanga'},
+                            type: 'POST',
+                            success: function(response){
+                                //var obj = JSON.parse(response.events);
+
+                                //console.log(obj[0].title);
+                                console.log(response);
+                            }
+                        });
+
+                        // change the day's background color just for fun
+                        $(this).css('background-color', 'lightgreen');
+
+                    }
+                    /*eventClick: function(event) {
+                        if (event) {
+                            //console.log("start: "+event.start._i);
+                            //console.log("end: "+event.end._i);
+                            var start = event.start._i;
+                            var end = event.end._i;
+                            $.ajax({
+                                url: URL + '/get-events',
+                                data: {},
+                                type: 'POST',
+                                success: function(response){
+                                    var obj = JSON.parse(response.events);
+                                    
+                                    console.log(obj[0].title); 
+                                    
+                                }
+                             });
+                        }
+                    }*/
+                    
+            });
+        });
+    </script>
+
+{% endblock%}
 {% block body %}
-<div class="container">
-    <div id="partido" class="col-lg-7 box-default pull-left">
-        <h1 class="box-header">Partido</h1>
+<div class="container" style="width:80%;">
+    <div id="partido" class="col-lg-7 box-default pull-left animated fadeInDown">
+        <h1 class="box-header">Día de partido</h1>
         <div class="box-content">
            <div class="col-lg-12 publication-item">
-               <p>Aquí va el contenido de la izquierda</p>
+               <div class="ibox-content">
+                   <div id="calendar"></div>                  
+                </div>
+               <a href="{{ path('add-partido')}}"><button class="crear-partido btn btn-default pull-right">Crear partido</button></a>
            </div>
         </div>
     </div>
     
-    <div id="datos" class="col-lg-4 box-default pull-left">
+    <div id="datos" class="col-lg-4 box-default pull-left animated fadeInDown">
         <h1 class="box-header">Datos del partido</h1>
         <div class="box-content">
            <div class="col-lg-12 publication-item">

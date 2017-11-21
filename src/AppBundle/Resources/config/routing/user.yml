@@ -11,6 +11,7 @@ logout:
 user_home:
     path: /home
     defaults: { _controller: AppBundle:User:index }
+    methods: [GET]
        
 register:
     path: /register
@@ -25,6 +26,21 @@ jugadores:
     path: /jugadores
     defaults: { _controller: AppBundle:User:jugadores }
     
+get-eventos:
+    path: /get-events
+    defaults: { _controller: AppBundle:Evento:getEvent }
+    
+add-event:
+    path: /add-event
+    defaults: { _controller: AppBundle:Evento:addEvent }
+    methods: [POST]
+    
+add-partido:
+    path: /add-partido
+    defaults: { _controller: AppBundle:Evento:addPartido }
+    
+    
 
+    
     
 

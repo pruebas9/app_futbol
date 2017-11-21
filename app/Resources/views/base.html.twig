@@ -3,13 +3,13 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{% block title %}App_f la aplicación de fútbol{% endblock %}</title>
+        <title>{% block title %}Fútbol{% endblock %}</title>
         {% block stylesheets %}
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">          
-            <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/bootstrap.min.css') }}"/>
-            <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/bootstrap.css') }}"/>
-            <!--<link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/style.css') }}"/>-->
-            <!--<link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/animate.css') }}">-->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">         
+            <!--<link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/bootstrap.min.css') }}"/>-->
+            <!--<link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/bootstrap.css') }}"/>-->
+            <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/style.css') }}"/>
+            <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/animate.css') }}">
             <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/estilos.css') }}"/>
             <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
         {% endblock %}
@@ -27,7 +27,6 @@
                             <span class="icon-bar"></span>
 			</button>
 			<a class="navbar-brand" href="{{path('user_home')}}">
-                            <!--<span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>-->
                             <span class="fa fa-futbol-o" aria-hidden="true"></span>
                             PZ fútbol
 			</a>
@@ -96,14 +95,14 @@
                                     <!-- Mostrar el avatar del usuario -->
                                     <div class="avatar">
                                         {% if app.user.image == null %}
-                                            <img src="{{ asset('/assets/images/default.png')}}"/>
+                                            <img src="{{ asset('/assets/images/default1.png')}}"/>
                                         {% else %}
                                             <img src="#"/>
                                         {% endif %}
                                     </div>
                                     <!-- Mostramos el nombre del usuario -->
                                     {{app.user.name}} {{app.user.surname}}
-                                    <span class="caret"></span>
+                                    
                                     </a>
                                   
                                     
@@ -118,29 +117,30 @@
                             {% endif %}
 			</div>
 		</header>
-                <section id="content">
-                    <div class="container">
-                        <div class="col-lg-10">
-                            {% for message in app.session.flashbag().get('message')%}
-                                <div class="alert alert-success">{{message}}</div>
-                            {% endfor %}
-                        </div>
-                    </div>
-                        <div class="clearfix"></div>
-                        {% block content %}
-                        {% endblock %}
-                </section>
+        <section id="content">
+            <div class="container">
+                <div class="col-lg-12">
+                    {% for message in app.session.flashbag().get('message')%}
+                        <div class="alert alert-success flash-message">{{message}}</div>
+                    {% endfor %}
+                </div>
+            </div>
+                <div class="clearfix"></div>
+                {% block content %}
+                {% endblock %}
+                
         {% block body %}{% endblock %}
-        
+        </section>
         {% block javascripts %}
             <script>
                 //función twig para sacar la url del proyecto
                 var URL = "{{ app.request.getSchemeAndHttpHost() }}";
             </script>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
             <script src="{{ asset('/assets/js/jquery-2.1.1.js') }}"></script>
             <script src="{{ asset('/assets/js/bootstrap.min.js') }}"></script>
+            <script src="{{ asset('/assets/js/custom/efectos.js') }}"></script>
         {% endblock %}
     </body>
 </html>
